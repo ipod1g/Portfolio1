@@ -1,0 +1,83 @@
+.fade-in-text {
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.hero-btn-1 {
+	width: 300px;
+	height: 58px;
+	border: 2px solid rgb(24, 24, 24);
+	background-color: transparent;
+	border-radius: 4px;
+	transition: ease-out 0.2s;
+	font-size: 22px;
+    font-weight: 600;
+	outline: none;
+    position:relative; 
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.hero-btn-1:hover {
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.hero-btn-1:before {
+    transition: 0.4s all ease;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    content: "";
+    background-color:rgb(24, 24, 24);
+}
+
+.hero-btn-1:hover:before {
+    transition: 0.4s all ease;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url('http://domain.example/fonts/font.ttf'); /*URL to font*/
+}
+
+
