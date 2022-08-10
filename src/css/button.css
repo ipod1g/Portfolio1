@@ -11,7 +11,7 @@ body {
 	--cursor-stroke: #fff;
     --cursor-fill: #fff;
     --cursor-stroke-width: 1px;
-	--button-filler: #000;
+	/* --button-filler: #000; */
 	--color-bg: #ccc;
 }
 
@@ -25,8 +25,8 @@ body {
 	color: var(--button-text);
 	background: var(--button-bg);
 	border-radius: var(--button-border-radius);
-	min-width: 14rem;
-	height: 6rem;
+	min-width: 10rem;
+	height: 7rem;
 	padding: 0;
 	margin: 1rem;
 	font-family: inherit;
@@ -47,8 +47,8 @@ body {
 	color: var(--button-text);
 	background: var(--button-bg);
 	border-radius: var(--button-border-radius);
-	min-width: 14rem;
-	height: 6rem;
+	min-width: 10rem;
+	height: 7rem;
 	padding: 0;
 	margin: 1rem;
 	font-family: inherit;
@@ -59,29 +59,7 @@ body {
 	justify-content: center;
 }
 
-.button_3 {
-	cursor: pointer;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	border-width: var(--button-stroke-width);
-	border-color: var(--button-stroke);
-	border-style: solid;
-	color: var(--button-text);
-	background: var(--button-bg);
-	border-radius: var(--button-border-radius);
-	min-width: 14rem;
-	height: 6rem;
-	padding: 0;
-	margin: 1rem;
-	font-family: inherit;
-	font-size: 1.5rem;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.button_1:focus,
+.button:focus,
 .button--hover {
 	outline: none;
 	border-width: var(--button-stroke-width-hover);
@@ -108,3 +86,5 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+/* Add z-index for the image mirror */

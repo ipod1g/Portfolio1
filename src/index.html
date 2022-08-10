@@ -9,8 +9,8 @@
 		<meta name="author" content="Bono" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="https://use.typekit.net/jpv1bvw.css">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/button.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/hero.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
@@ -29,8 +29,11 @@
 			<section class="hero-panel">
 				<div class="hero-container">
 					<h2 class="hero-name">Frontend Developer</h2>
-					<h1 class="fade-in-text hero-name">
+					<h1 class="fade-in-text hero-name name-container">
 						Ku Bon Kwan
+						<span class="name-overlay name-overlay--primary">
+							<p class="name-text">... call me BONO</p>
+						</span>
 					</h1>
 					<div class="hero-btn">
 						<!-- Find to apply the hover cursor effect -->
@@ -41,44 +44,47 @@
 			</section>
 
 			<section class="xp-panel">
-				<div class="content-1">
+				<h1 class="xptitle"> Find Out More </h1>
+				<div class="sticky-1">
 					<button class="button">
 						<div class="button__filler"></div>
 						<span class="button__text">
-							<span class="button__text-inner">1</span>
+							<span class="button__text-inner">
+								<img src="/images/particles.png" class="sticky-img">
+							</span>
 						</span>
 					</button>
+					<p class="sticky-1 desc-text">
+						Summer Undergraduate Research Internship 2022 at The Chinese University of Hong Kong
+					</p>
 				</div>
-				<p class="content-1-text">
-					Hello
-				</p>
 	
-				<div class="content-2">
+				<div class="sticky-2 desc-text">
 					<button class="button_2">
 						<div class="button__filler"></div>
 						<span class="button__text">
-							<span class="button__text-inner">2</span>
+							<span class="button__text-inner">
+								<img src="/images/medal.png" class="sticky-img">
+							</span>
 						</span>
 					</button>
+					<p class="sticky-2 desc-text">
+						Second runner-up in the Hong Kong preliminary rounds with teammates from Hong Kong University of Science and Technology
+					</p>
 				</div>
-				<p class="content-2-text">
-					Hello
-				</p>
 	
-				<div class="content-3">
-					<button class="button_3">
+				<div class="sticky-3">
+					<button class="button">
 						<div class="button__filler"></div>
 						<span class="button__text">
 							<span class="button__text-inner">3</span>
 						</span>
 					</button>
+					<p class="sticky-3 desc-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+					</p>
 				</div>
-				<p class="content-3-text">
-					Hello
-				</p>
 			</section>
-
-
 			<!-- <nav class="demos">
 				<a href="index.html" class="demo demo--current" aria-label="Demo 4"></a>
 				<a href="index2.html" class="demo" aria-label="Demo 2"></a>
@@ -87,8 +93,11 @@
 				<a href="index5.html" class="demo" aria-label="Demo 5"></a>
 				<a href="index6.html" class="demo" aria-label="Demo 6"></a>
 			</nav> -->
-
 		</main>
+
+		<footer class="footer-panel">
+			<h1 class="footer-credits">Magnetic Buttons by <a href="https://github.com/codrops/MagneticButtons/">Codrops</a></h1>
+		</footer>
 
 		<svg class="cursor" width="25" height="25" viewBox="0 0 25 25">
 			<circle class="cursor__inner" cx="12.5" cy="12.5" r="6.25"/>
