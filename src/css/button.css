@@ -2,16 +2,16 @@ body {
 	--button-border-radius: 40px;
 	--button-bg: transparent;
 	--button-stroke: #000;
-	--button-stroke-width: 1px;
+	--button-stroke-width: 2px;
 	--button-text: #000;
 	--button-bg-hover: #d8d4cf;
 	--button-stroke-hover: #000;
 	--button-stroke-width-hover: 1px;
 	--button-text-hover: #fff;
-	--cursor-stroke: #fff;
-    --cursor-fill: #fff;
+	--cursor-stroke: rgb(37, 37, 37);
+    --cursor-fill: rgb(248, 248, 248);
     --cursor-stroke-width: 1px;
-	/* --button-filler: #000; */
+	--button-filler: #000;
 	--color-bg: #ccc;
 }
 
@@ -88,3 +88,63 @@ body {
 }
 
 /* Add z-index for the image mirror */
+
+
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+} */
+
+.buttons{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    background: var(--i);
+    box-shadow: 0 0 10px var(--i);
+    /* Add effect for animtion more smoothly */
+    transition: transform .2s linear;
+}
+
+.buttons:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.buttons span{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: transform .2s linear;
+}
+
+.hover-pointer{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Add effect moving */
+    transition: left .2s ease, top .2s ease;
+    transition-delay: 0;
+}
+
+/* pointer transform when cursor hover to the button */
+.pointer.buttonHover{
+    transition: .2s ease;
+    transform: scale(6);
+    background: #fff;
+    opacity: .2;
+}
