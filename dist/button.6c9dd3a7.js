@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/gsap/gsap-core.js":[function(require,module,exports) {
+})({"TNS6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4301,7 +4301,7 @@ exports.Power3 = Power3;
 exports.Power2 = Power2;
 exports.Power1 = Power1;
 exports.Power0 = Power0;
-},{}],"../node_modules/gsap/CSSPlugin.js":[function(require,module,exports) {
+},{}],"bp4Z":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5717,7 +5717,7 @@ _gsapCore.gsap.utils.checkPrefix = _checkPropPrefix;
 });
 
 _gsapCore.gsap.registerPlugin(CSSPlugin);
-},{"./gsap-core.js":"../node_modules/gsap/gsap-core.js"}],"../node_modules/gsap/index.js":[function(require,module,exports) {
+},{"./gsap-core.js":"TNS6"}],"TpQl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5867,7 +5867,7 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 exports.TweenMax = TweenMaxWithCSS;
 exports.default = exports.gsap = gsapWithCSS;
-},{"./gsap-core.js":"../node_modules/gsap/gsap-core.js","./CSSPlugin.js":"../node_modules/gsap/CSSPlugin.js"}],"js/utils.js":[function(require,module,exports) {
+},{"./gsap-core.js":"TNS6","./CSSPlugin.js":"bp4Z"}],"MgTz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5922,7 +5922,7 @@ var getRandomFloat = function getRandomFloat(min, max) {
 };
 
 exports.getRandomFloat = getRandomFloat;
-},{}],"js/cursor.js":[function(require,module,exports) {
+},{}],"LMRJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6005,7 +6005,7 @@ var Cursor = /*#__PURE__*/function () {
   _createClass(Cursor, [{
     key: "enter",
     value: function enter() {
-      this.renderedStyles['scale'].current = 4;
+      this.renderedStyles['scale'].current = 3.5;
       this.renderedStyles['opacity'].current = 0.2;
     }
   }, {
@@ -6038,7 +6038,7 @@ var Cursor = /*#__PURE__*/function () {
 }();
 
 exports.default = Cursor;
-},{"gsap":"../node_modules/gsap/index.js","./utils":"js/utils.js"}],"../node_modules/events/events.js":[function(require,module,exports) {
+},{"gsap":"TpQl","./utils":"MgTz"}],"FRpO":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6505,7 +6505,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
     throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
   }
 }
-},{}],"js/button/buttonCtrl.js":[function(require,module,exports) {
+},{}],"meIN":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6543,7 +6543,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 // Calculate the viewport size
 var winsize = (0, _utils.calcWinsize)();
-window.addEventListener('resize', function () {
+window.addEventListener("resize", function () {
   return winsize = (0, _utils.calcWinsize)();
 }); // Track the mouse position
 
@@ -6551,7 +6551,7 @@ var mousepos = {
   x: 0,
   y: 0
 };
-window.addEventListener('mousemove', function (ev) {
+window.addEventListener("mousemove", function (ev) {
   return mousepos = (0, _utils.getMousePos)(ev);
 });
 
@@ -6572,9 +6572,10 @@ var ButtonCtrl = /*#__PURE__*/function (_EventEmitter) {
     _this.DOM = {
       el: el
     };
-    _this.DOM.text = _this.DOM.el.querySelector('.button__text');
-    _this.DOM.textinner = _this.DOM.el.querySelector('.button__text-inner');
-    _this.DOM.filler = _this.DOM.el.querySelector('.button__filler'); // amounts the button will translate
+    _this.DOM.text = _this.DOM.el.querySelector(".button__text");
+    _this.DOM.textinner = _this.DOM.el.querySelector(".button__text-inner");
+    _this.DOM.filler = _this.DOM.el.querySelector(".button__filler");
+    _this.DOM.staticBtn = _this.DOM.el.querySelector(".button__static"); // amounts the button will translate
 
     _this.renderedStyles = {
       tx: {
@@ -6622,7 +6623,7 @@ var ButtonCtrl = /*#__PURE__*/function (_EventEmitter) {
         return _this2.calculateSizePosition();
       };
 
-      window.addEventListener('resize', this.onResize);
+      window.addEventListener("resize", this.onResize);
     }
   }, {
     key: "render",
@@ -6640,21 +6641,21 @@ var ButtonCtrl = /*#__PURE__*/function (_EventEmitter) {
           this.enter();
         }
 
-        x = (mousepos.x + window.scrollX - (this.rect.left + this.rect.width / 2)) * .3;
-        y = (mousepos.y + window.scrollY - (this.rect.top + this.rect.height / 2)) * .3;
+        x = (mousepos.x + window.scrollX - (this.rect.left + this.rect.width / 2)) * 0.3;
+        y = (mousepos.y + window.scrollY - (this.rect.top + this.rect.height / 2)) * 0.3;
       } else if (this.state.hover) {
         this.leave();
       }
 
-      this.renderedStyles['tx'].current = x;
-      this.renderedStyles['ty'].current = y;
+      this.renderedStyles["tx"].current = x;
+      this.renderedStyles["ty"].current = y;
 
       for (var key in this.renderedStyles) {
         this.renderedStyles[key].previous = (0, _utils.lerp)(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].amt);
       }
 
-      this.DOM.el.style.transform = "translate3d(".concat(this.renderedStyles['tx'].previous, "px, ").concat(this.renderedStyles['ty'].previous, "px, 0)");
-      this.DOM.text.style.transform = "translate3d(".concat(-this.renderedStyles['tx'].previous * 0.6, "px, ").concat(-this.renderedStyles['ty'].previous * 0.6, "px, 0)");
+      this.DOM.el.style.transform = "translate3d(".concat(this.renderedStyles["tx"].previous, "px, ").concat(this.renderedStyles["ty"].previous, "px, 0)");
+      this.DOM.text.style.transform = "translate3d(".concat(-this.renderedStyles["tx"].previous * 0.6, "px, ").concat(-this.renderedStyles["ty"].previous * 0.6, "px, 0)");
       requestAnimationFrame(function () {
         return _this3.render();
       });
@@ -6662,62 +6663,62 @@ var ButtonCtrl = /*#__PURE__*/function (_EventEmitter) {
   }, {
     key: "enter",
     value: function enter() {
-      this.emit('enter');
+      this.emit("enter");
       this.state.hover = true;
-      this.DOM.el.classList.add('button--hover');
-      document.body.classList.add('active');
+      this.DOM.el.classList.add("button--hover");
+      document.body.classList.add("active");
 
       _gsap.gsap.killTweensOf(this.DOM.filler);
 
       _gsap.gsap.killTweensOf(this.DOM.textinner);
 
       _gsap.gsap.timeline().to(this.DOM.filler, 0.5, {
-        ease: 'Power3.easeOut',
+        ease: "Power3.easeOut",
         startAt: {
-          y: '75%'
+          y: "75%"
         },
-        y: '0%'
+        y: "0%"
       }).to(this.DOM.textinner, 0.1, {
-        ease: 'Power3.easeOut',
+        ease: "Power3.easeOut",
         opacity: 0,
-        y: '-10%'
+        y: "-10%"
       }, 0).to(this.DOM.textinner, 0.25, {
-        ease: 'Power3.easeOut',
+        ease: "Power3.easeOut",
         opacity: 1,
         startAt: {
-          y: '30%',
+          y: "30%",
           opacity: 1
         },
-        y: '0%'
+        y: "0%"
       }, 0.1);
     }
   }, {
     key: "leave",
     value: function leave() {
-      this.emit('leave');
+      this.emit("leave");
       this.state.hover = false;
-      this.DOM.el.classList.remove('button--hover');
-      document.body.classList.remove('active');
+      this.DOM.el.classList.remove("button--hover");
+      document.body.classList.remove("active");
 
       _gsap.gsap.killTweensOf(this.DOM.filler);
 
       _gsap.gsap.killTweensOf(this.DOM.textinner);
 
       _gsap.gsap.timeline().to(this.DOM.filler, 0.4, {
-        ease: 'Power3.easeOut',
-        y: '-75%'
+        ease: "Power3.easeOut",
+        y: "-75%"
       }).to(this.DOM.textinner, 0.1, {
-        ease: 'Power3.easeOut',
+        ease: "Power3.easeOut",
         opacity: 0,
-        y: '10%'
+        y: "10%"
       }, 0).to(this.DOM.textinner, 0.25, {
-        ease: 'Power3.easeOut',
+        ease: "Power3.easeOut",
         opacity: 1,
         startAt: {
-          y: '-30%',
+          y: "-30%",
           opacity: 1
         },
-        y: '0%'
+        y: "0%"
       }, 0.1);
     }
   }]);
@@ -6726,7 +6727,7 @@ var ButtonCtrl = /*#__PURE__*/function (_EventEmitter) {
 }(_events.EventEmitter);
 
 exports.default = ButtonCtrl;
-},{"gsap":"../node_modules/gsap/index.js","events":"../node_modules/events/events.js","../utils":"js/utils.js"}],"js/button/index.js":[function(require,module,exports) {
+},{"gsap":"TpQl","events":"FRpO","../utils":"MgTz"}],"TYcD":[function(require,module,exports) {
 "use strict";
 
 var _cursor = _interopRequireDefault(require("../cursor"));
@@ -6735,218 +6736,38 @@ var _buttonCtrl = _interopRequireDefault(require("./buttonCtrl"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// initialize custom cursor
-var cursor = new _cursor.default(document.querySelector('.cursor'));
-var button = new _buttonCtrl.default(document.querySelector('.button'));
-button.on('enter', function () {
-  return cursor.enter();
-});
-button.on('leave', function () {
-  return cursor.leave();
-});
-},{"../cursor":"js/cursor.js","./buttonCtrl":"js/button/buttonCtrl.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-var global = arguments[3];
-var OVERLAY_ID = '__parcel__error__overlay__';
-var OldModule = module.bundle.Module;
+// initialize custom cursor on magnetic buttons
+var cursor = new _cursor.default(document.querySelector(".cursor"));
+var button = new _buttonCtrl.default(document.querySelector(".button"));
+var button2 = new _buttonCtrl.default(document.querySelector(".button_2"));
+var button3 = new _buttonCtrl.default(document.querySelector(".button_3")); // initialize custom cursor on hero buttons
 
-function Module(moduleName) {
-  OldModule.call(this, moduleName);
-  this.hot = {
-    data: module.bundle.hotData,
-    _acceptCallbacks: [],
-    _disposeCallbacks: [],
-    accept: function (fn) {
-      this._acceptCallbacks.push(fn || function () {});
-    },
-    dispose: function (fn) {
-      this._disposeCallbacks.push(fn);
-    }
-  };
-  module.bundle.hotData = null;
-}
+var buttonArray = document.getElementsByTagName("button");
 
-module.bundle.Module = Module;
-var checkedAssets, assetsToAccept;
-var parent = module.bundle.parent;
-
-if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = "" || location.hostname;
-  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36047" + '/');
-
-  ws.onmessage = function (event) {
-    checkedAssets = {};
-    assetsToAccept = [];
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      var handled = false;
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          var didAccept = hmrAcceptCheck(global.parcelRequire, asset.id);
-
-          if (didAccept) {
-            handled = true;
-          }
-        }
-      }); // Enable HMR for CSS by default.
-
-      handled = handled || data.assets.every(function (asset) {
-        return asset.type === 'css' && asset.generated.js;
-      });
-
-      if (handled) {
-        console.clear();
-        data.assets.forEach(function (asset) {
-          hmrApply(global.parcelRequire, asset);
-        });
-        assetsToAccept.forEach(function (v) {
-          hmrAcceptRun(v[0], v[1]);
-        });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
-      }
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-      removeErrorOverlay();
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
-      removeErrorOverlay();
-      var overlay = createErrorOverlay(data);
-      document.body.appendChild(overlay);
-    }
-  };
-}
-
-function removeErrorOverlay() {
-  var overlay = document.getElementById(OVERLAY_ID);
-
-  if (overlay) {
-    overlay.remove();
-  }
-}
-
-function createErrorOverlay(data) {
-  var overlay = document.createElement('div');
-  overlay.id = OVERLAY_ID; // html encode message and stack trace
-
-  var message = document.createElement('div');
-  var stackTrace = document.createElement('pre');
-  message.innerText = data.error.message;
-  stackTrace.innerText = data.error.stack;
-  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
-  return overlay;
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAcceptCheck(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAcceptCheck(bundle.parent, id);
-  }
-
-  if (checkedAssets[id]) {
-    return;
-  }
-
-  checkedAssets[id] = true;
-  var cached = bundle.cache[id];
-  assetsToAccept.push([bundle, id]);
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    return true;
-  }
-
-  return getParents(global.parcelRequire, id).some(function (id) {
-    return hmrAcceptCheck(global.parcelRequire, id);
+for (var i = 0; i < buttonArray.length; i++) {
+  buttonArray.item(i).addEventListener("mouseover", function () {
+    cursor.enter();
+  });
+  buttonArray.item(i).addEventListener("mouseout", function () {
+    cursor.leave();
   });
 }
 
-function hmrAcceptRun(bundle, id) {
-  var cached = bundle.cache[id];
-  bundle.hotData = {};
+var name = document.querySelector(".name-container");
+name.addEventListener("mouseover", function () {
+  cursor.enter();
+});
+name.addEventListener("mouseout", function () {
+  cursor.leave();
+});
+var header = document.querySelectorAll(".header__button");
 
-  if (cached) {
-    cached.hot.data = bundle.hotData;
-  }
-
-  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
-    cached.hot._disposeCallbacks.forEach(function (cb) {
-      cb(bundle.hotData);
-    });
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-  cached = bundle.cache[id];
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    cached.hot._acceptCallbacks.forEach(function (cb) {
-      cb();
-    });
-
-    return true;
-  }
+for (var _i = 0; _i < header.length; _i++) {
+  header.item(_i).addEventListener("mouseover", function () {
+    cursor.enter();
+  });
+  header.item(_i).addEventListener("mouseout", function () {
+    cursor.leave();
+  });
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/button/index.js"], null)
-//# sourceMappingURL=/button.6c9dd3a7.js.map
+},{"../cursor":"LMRJ","./buttonCtrl":"meIN"}]},{},["TYcD"], null)

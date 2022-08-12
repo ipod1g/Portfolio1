@@ -1,9 +1,4 @@
 
-:root {
-  --time: 1.3s; 
-  font-size: 12px;
-}
-
 .fade-in-text {
     animation: fadeIn var(--time);
     -webkit-animation: fadeIn var(--time);
@@ -37,10 +32,16 @@
     100% { opacity: 1; }
   }
 
+.hero-btn-1 a,
+.hero-btn-2 a {
+    text-decoration: none;
+}
+
 .hero-btn-1 {
+  color: var(--color-hero);
 	width: 14em;
 	height: 3.1em;
-	border: 2px solid rgb(24, 24, 24);
+	border: 2px solid var(--button-stroke);
 	background-color: transparent;
 	border-radius: 40px;
 	transition: ease-out 0.2s;
@@ -49,24 +50,32 @@
 	outline: none;
   position:relative; 
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
   z-index: 0;
+}
+.hero-btn-1:hover {
+  color:#ededed;
 }
 
 .hero-btn-2 {
   width: 14rem;
 }
 
-.hero-btn-1:hover {
-    color:#ededed;
+.hero-btn-overlay {
+	text-decoration: none;
+  color: inherit;
+}
+
+.hero-btn-overlay:hover {
     cursor: pointer;
 }
 
 .hero-btn-1:before {
     transition: 0.4s all ease;
     position: absolute;
-    top: 0;
+    top: -2.5%;
     right: 50%;
-    bottom: 0;
+    bottom: -3.5%;
     left: 50%;
     opacity: 0;
     content: "";
@@ -76,8 +85,8 @@
 
 .hero-btn-1:hover:before {
     transition: 0.4s all ease;
-    right: 0;
-    left: 0;
+    right: -1%;
+    left: -1%;
     z-index: -1;
     opacity: 1;
 }
@@ -92,9 +101,9 @@
 .name-overlay {
   position: absolute;
   top: -0.4rem;
-  left: -1.25rem;
-  width: 104%;
-  height: 119%;
+  /* left: -1.25rem; */
+  width: 100%;
+  height: 125%;
   background: rgba(0, 0, 0, 0.6);
   color: #000000;
   display: flex;
@@ -112,8 +121,14 @@
 }
 
 .name-overlay > * {
-  transform: translateX(20px);
+  transform: translateX(1rem);
   transition: transform 0.35s;
+}
+
+@media screen and (max-width: 925px) {
+  .name-overlay > * {
+    transform: translateY(1rem);
+  }
 }
 
 .name-overlay:hover {

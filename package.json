@@ -1,7 +1,7 @@
 {
-  "name": "MagneticButton",
+  "name": "bonohome",
   "version": "1.0.0",
-  "description": "A small set of magnetic buttons with some fun hover animations.",
+  "description": "First simple interactive website",
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html --open",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/codrops/MagneticButton.git"
+    "url": "git://github.com/ipod1g/Portfolio1"
   },
   "keywords": [],
-  "author": "Codrops",
+  "author": "Bono",
   "license": "MIT",
-  "homepage": "https://tympanus.net/codrops/",
+  "homepage": "https://bonoku.shop",
   "bugs": {
-    "url": "https://github.com/codrops/MagneticButton/issues"
+    "url": "https://github.com/ipod1g/Portfolio1/issues"
   },
   "dependencies": {
     "gsap": "^3.4.2",

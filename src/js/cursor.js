@@ -29,7 +29,7 @@ export default class Cursor {
         window.addEventListener('mousemove', this.onMouseMoveEv);
     }
     enter() {
-        this.renderedStyles['scale'].current = 4;
+        this.renderedStyles['scale'].current = 3.5;
         this.renderedStyles['opacity'].current = 0.2;
     }
     leave() {
