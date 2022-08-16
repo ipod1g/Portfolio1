@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bonoku.shop/sitemap.xml
