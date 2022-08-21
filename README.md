@@ -4,8 +4,8 @@ My very first simple portfolio website
 https://www.bonoku.shop/
 
 # Version check
-_________________
 
+---
 - v1.0.0
     - Deployed on 13 Aug 2022
     - Added **content**, contacts, hover interactions, magnetic buttons and responsive design
@@ -20,8 +20,8 @@ _________________
     - Small change to font colors and tint
 
 # Summary
-__________________
 
+---
 ### Skills used
 - HTML
 - CSS
@@ -40,8 +40,8 @@ __________________
 
 
 # Process
-_________________
 
+---
 ### Initial
 
 - Imported package from magnetic buttons demo website
@@ -64,6 +64,6 @@ _________________
 - Actively taking in feedbacks for better end product
 
 # Future implementation
-_________________
 
+---
 - Future work may add pop-up screen using react / framer.motion instead of redirecting to another link
