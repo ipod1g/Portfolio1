@@ -25,6 +25,9 @@ https://www.bonoku.shop/
    -  Update on 5 Sep 2022
    -  Replaced work3 (drag scroll) with Riot Games login screen deployment
    -  Drag scroll is now accessible through second button for now…
+   -  Hotfix by page load on top seems to have bug on mobile devices
+      -  Removed again → bug on refresh page is back
+         -  Temp fix in future by removing cursor interaction and to a clean button
 
 # Summary
 

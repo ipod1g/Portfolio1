@@ -1,6 +1,6 @@
 {
   "name": "bonohome",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "First simple interactive website",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ipod1g/Portfolio1"
+    "url": "git://github.com/ipod1g/portfolio-1"
   },
   "keywords": [],
   "author": "Bono",
   "license": "MIT",
   "homepage": "https://bonoku.shop",
   "bugs": {
-    "url": "https://github.com/ipod1g/Portfolio1/issues"
+    "url": "https://github.com/ipod1g/portfolio-1/issues"
   },
   "dependencies": {
     "gsap": "^3.4.2",
